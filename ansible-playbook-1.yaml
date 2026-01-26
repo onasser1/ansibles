@@ -1,0 +1,9 @@
+---
+- name: Configure Apache on all servers in 'web' group
+  hosts: web
+  become: yes
+  tasks:
+    - name: Install Apache on Debian-based distros
+      apt:
+        name: apache2
+        state: present
