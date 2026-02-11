@@ -1,0 +1,11 @@
+---
+- name: Playbook to iterate using loop over dictionary
+  hosts: localhost
+  gather_facts: false
+  var_files:
+    - users-dict.yml
+  tasks:
+    - name: Display each username with his preferred group. (Either developer or designer)
+      debug:
+        msg: This is "{{ item.username }}" with his preferred group "{{ item.groups }}"
+      loop: "{{ users }}"

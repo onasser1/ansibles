@@ -1,0 +1,7 @@
+users:
+  - username: onasser
+    groups: developer
+  - username: kashkoush
+    groups: developers
+  - username: youssef
+    groups: designer
